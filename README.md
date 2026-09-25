@@ -389,29 +389,23 @@ Edad: XX
 Mayor de edad: true
 ```
 
-### Captura de resultados en consola
-
-Agregar aquí una captura de pantalla de la consola del navegador:
-
-> **[Insertar captura de la consola aquí]**
-
 ## Capturas de pantalla
 
 ### Formulario de registro
 
-> **[Insertar captura de index.html aquí]**
+(img/Formulario.png)
 
 ### Modal con resultado
 
-> **[Insertar captura del modal aquí]**
+(img/Modal.png)
 
 ### Página de Login
 
-> **[Insertar captura de login.html aquí]**
+(img/Login.png)
 
 ### Consola del navegador
 
-> **[Insertar captura de los resultados en consola aquí]**
+(img/Consola.png)
 
 ## Video de demostración
 
