@@ -393,19 +393,19 @@ Mayor de edad: true
 
 ### Formulario de registro
 
-(img/Formulario.png)
+!(img/Formulario.png)
 
 ### Modal con resultado
 
-(img/Modal.png)
+!(img/Modal.png)
 
 ### Página de Login
 
-(img/Login.png)
+!(img/Login.png)
 
 ### Consola del navegador
 
-(img/Consola.png)
+!(img/Consola.png)
 
 ## Video de demostración
 
