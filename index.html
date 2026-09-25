@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Libreria utileria JS</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/utileria.js"></script>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Registro de usuario</h1>
+
+        <form id="formulario">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ej. Jhonatan Poblete">
+
+
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" placeholder="Ej. ejemplo@gmail.com">
+
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" placeholder="10 dígitos">
+
+
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento">
+
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" placeholder="Ej. Hola123!">
+
+
+            <button type="submit">Registrarse</button>
+
+        </form>
+
+        <a href="login.html">Ir al Login</a>
+
+    </div>
+
+
+    <div id="modal" class="modal">
+
+        <div class="modal-contenido">
+
+            <span id="cerrar" class="cerrar">&times;</span>
+
+            <h2>Registro completado</h2>
+
+            <p id="resultadoEdad"></p>
+
+            <button id="aceptar">Aceptar</button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let formulario = document.getElementById("formulario");
+        let modal = document.getElementById("modal");
+        let cerrar = document.getElementById("cerrar");
+        let aceptar = document.getElementById("aceptar");
+
+
+        formulario.addEventListener("submit", function(evento) {
+
+            evento.preventDefault();
+
+
+            let nombre = document.getElementById("nombre").value;
+            let correo = document.getElementById("correo").value;
+            let telefono = document.getElementById("telefono").value;
+            let fechaNacimiento = document.getElementById("fechaNacimiento").value;
+            let password = document.getElementById("password").value;
+
+
+            if (!soloLetras(nombre)) {
+
+                alert("El nombre solo debe contener letras.");
+
+                return;
+            }
+
+
+            if (!validarCorreo(correo)) {
+
+                alert("El correo no tiene un formato válido.");
+
+                return;
+            }
+
+
+            if (!validarTelefono(telefono)) {
+
+                alert("El teléfono debe tener exactamente 10 dígitos.");
+
+                return;
+            }
+
+
+            if (fechaNacimiento === "") {
+
+                alert("Selecciona tu fecha de nacimiento.");
+
+                return;
+            }
+
+
+            let edad = calcularEdad(fechaNacimiento);
+
+
+            if (edad < 0) {
+
+                alert("La fecha de nacimiento no puede ser futura.");
+
+                return;
+            }
+
+
+            if (!validarLongitud(edad, 2)) {
+
+                alert("La fecha de nacimiento no es válida.");
+
+                return;
+            }
+
+
+            if (!validarPassword(password)) {
+
+                alert("La contraseña debe tener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.");
+
+                return;
+            }
+
+
+            let mayor = esMayorDeEdad(fechaNacimiento);
+
+
+            let nombreFormateado = formatearNombre(nombre);
+
+
+            let resultado = document.getElementById("resultadoEdad");
+
+            resultado.innerHTML =
+                "Hola <strong>" + nombreFormateado + "</strong>.<br><br>" +
+                "Tu edad es: <strong>" + edad + " años</strong>.<br>" +
+                "Mayor de edad: <strong>" + (mayor ? "Sí" : "No") + "</strong>";
+
+
+            // Mostrar modal
+            modal.style.display = "block";
+
+
+            console.log("Formulario validado correctamente.");
+            console.log("Nombre:", nombreFormateado);
+            console.log("Correo:", correo);
+            console.log("Teléfono:", telefono);
+            console.log("Edad:", edad);
+            console.log("Mayor de edad:", mayor);
+
+        });
+
+
+        cerrar.addEventListener("click", function() {
+
+            modal.style.display = "none";
+
+        });
+
+
+        aceptar.addEventListener("click", function() {
+
+            modal.style.display = "none";
+
+        });
+
+    </script>
+</body>
+</html>
