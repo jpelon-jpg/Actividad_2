@@ -440,7 +440,7 @@ https://github.com/jpelon-jpg/Actividad_2
 
 Página web del proyecto:
 
-> **[Agregar aquí el enlace de GitHub Pages]**
+https://jpelon-jpg.github.io/Actividad_2/
 
 ## Conclusión
 
