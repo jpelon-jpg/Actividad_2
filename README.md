@@ -428,7 +428,7 @@ El video muestra:
 
 **Video de demostración:**
 
-> **[Agregar aquí el enlace al video]**
+https://www.youtube.com/
 
 ## GitHub
 
