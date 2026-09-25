@@ -1,6 +1,6 @@
 # Utilería JavaScript para Formularios Web
 
-## Integrantes
+## Alumno
 
 **Jhonatan Poblete**
 
