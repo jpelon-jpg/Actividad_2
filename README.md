@@ -2,7 +2,7 @@
 
 ## Alumno
 
-**Jhonatan Poblete**
+**Jhonatan Ivan Poblete Hernandez**
 
 ## Descripción del proyecto
 
